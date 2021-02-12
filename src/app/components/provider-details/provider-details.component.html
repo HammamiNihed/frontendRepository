@@ -1,0 +1,35 @@
+<div class="container">
+    <!-- No data message -->
+    <p *ngIf="Provider.length <= 0" class="no-data text-center">There is no Provider added yet!</p>
+  
+    <!-- Provider list -->
+    <table class="table table-bordered" *ngIf="Provider.length > 0">
+      <thead class="table-success">
+        <tr>
+          <th scope="col">Provider ID</th>
+          <th scope="col">Type</th>
+          <th scope="col">Contact</th>
+          <th scope="col">OpeningDaysHours</th>
+          <th scope="col">Services</th>
+          <th scope="col center">IsAutoAssignable</th>
+          <th scope="col center">Rating</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr *ngFor="let p of Provider; let i = index">
+          <th scope="row">{{p._id}}</th>
+          <td>{{p.type}}</td>
+          <td>{{p.contacts}}</td>
+          <td>{{p.opening_days_hours}}</td>
+          <td>{{p.services}}</td>
+          <td>{{p.is_auto_assignable}}</td>
+          <td>{{p.rating}}</td>
+          <td class="text-center">
+            <button class="btn btn-sm btn-primary" routerLink="/edit-provider/{{Provider._id}}">Edit</button>
+            <button class="btn btn-sm btn-danger" (click)="delete(Provider._id, i)">Delete</button>
+          </td>  
+        </tr>
+      </tbody>
+    </table>
+  </div>

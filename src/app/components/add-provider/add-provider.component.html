@@ -1,0 +1,80 @@
+
+<div class="row justify-content-center mt-5">
+    <div class="col-md-4">
+        <form [formGroup]="providerForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label>provider_type</label>
+            <input [(ngModel)]="type" [ngModelOptions]="{standalone: true}" class="form-control" type="text" required>
+          </div>
+          <div class="form-group">
+            <label>contact_type</label>
+            <input [(ngModel)]="contact_type" [ngModelOptions]="{standalone: true}" class="form-control" type="text" required>
+          </div>
+           <div class="form-group">
+            <label>street_address</label>
+            <input [(ngModel)]="street_address" [ngModelOptions]="{standalone: true}" class="form-control" type="text" required>
+          </div>
+           <div class="form-group">
+            <label>subdivision</label>
+            <input [(ngModel)]="subdivision" [ngModelOptions]="{standalone: true}" class="form-control" type="text" required>
+          </div>
+           <div class="form-group">
+            <label>postal_code</label>
+            <input [(ngModel)]="postal_code" [ngModelOptions]="{standalone: true}" class="form-control" type="text" required>
+          </div> 
+          <div class="form-group">
+            <label>locality</label>
+            <input [(ngModel)]="locality" [ngModelOptions]="{standalone: true}" class="form-control" type="text" required>
+          </div>
+           <div class="form-group">
+            <label>country</label>
+            <input [(ngModel)]="country" [ngModelOptions]="{standalone: true}" class="form-control" type="text" required>
+          </div> 
+          <div class="form-group">
+            <label>email</label>
+            <input [(ngModel)]="email" [ngModelOptions]="{standalone: true}" class="form-control" type="email" required>
+          </div>
+           <div class="form-group">
+            <label>mobile_phone_number</label>
+            <input [(ngModel)]="mobile_phone_number" [ngModelOptions]="{standalone: true}" class="form-control" type="text" required>
+          </div> 
+          <div class="form-group">
+            <label>office_phone_number</label>
+            <input [(ngModel)]="office_phone_number" [ngModelOptions]="{standalone: true}" class="form-control" type="text" required>
+          </div>
+           <div class="form-group">
+            <label>fax_number</label>
+            <input [(ngModel)]="fax_number" [ngModelOptions]="{standalone: true}" class="form-control" type="text" required>
+          </div>
+          <div class="form-group">
+            <label>day_of_week</label>
+            
+            <select  [(ngModel)]="day" [ngModelOptions]="{standalone: true}"  class="form-control">
+              <option *ngFor="let d of days">{{d}}</option>
+           </select>
+          </div>
+          <div class="form-group">
+            <label>hour_periods</label>
+            <input [(ngModel)]="hour_periods" [ngModelOptions]="{standalone: true}" class="form-control" type="text" required>
+          </div>
+          <div class="form-group">
+            <label>services</label>
+            <input [(ngModel)]="services" [ngModelOptions]="{standalone: true}" class="form-control" type="text" required>
+          </div>
+          <div class="form-group">
+            <label>is_auto_assignable</label>
+            <input [(ngModel)]="is_auto_assignable" [ngModelOptions]="{standalone: true}" class="form-control" type="checkbox" required>
+          </div>
+          <div class="form-group">
+            <label>ranking</label>
+            <input [(ngModel)]="ranking" [ngModelOptions]="{standalone: true}" class="form-control" type="number" required>
+          </div>
+          
+  
+          
+          <div class="form-group">
+            <button class="btn btn-primary btn-block" type="submit">Add Provider</button>
+          </div>
+        </form>
+    </div>
+  </div>
